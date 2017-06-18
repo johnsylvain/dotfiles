@@ -1,3 +1,8 @@
+[color "status"]
+    added = yellow
+    changed = green
+	untracked = red
+
 [user]
 	name = John Sylvain
 	email = john.n.sylvain@gmail.com
