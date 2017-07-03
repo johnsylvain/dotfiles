@@ -1,6 +1,9 @@
+[color]
+	ui = auto
+
 [color "status"]
-    added = yellow
-    changed = green
+	added = yellow
+	changed = green
 	untracked = red
 
 [user]
