@@ -39,6 +39,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias a="atom ."
 
+eval $(thefuck --alias)
+
 source $HOME/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # mkdir and cd
