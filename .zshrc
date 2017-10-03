@@ -57,5 +57,8 @@ function mkcd {
 # open in VS Code
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
+# create gitignore from gitignore.io
+gitignore() { curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore }
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
