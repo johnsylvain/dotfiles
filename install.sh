@@ -7,6 +7,10 @@ ZSH=(
 	"ln -si ${BASEDIR}/john.zsh-theme $HOME/.oh-my-zsh/themes/john.zsh-theme"
 )
 
+VIM=(
+	"ln -si ${BASEDIR}/.vimrc ~/.vimrc"
+)
+
 GIT=(
 	"ln -si ${BASEDIR}/.gitconfig ~/.gitconfig"
 )
