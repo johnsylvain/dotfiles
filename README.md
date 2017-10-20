@@ -3,7 +3,8 @@
 my dotfiles
 - zsh
 - git
+- vim
 
 ## installing
-install all files with `./install.sh`. to install one of the types from above, pass it to `./install.sh` as the first argument (e.g. `./install.sh zsh`).
+install all files with `./install.sh`
 
