@@ -39,6 +39,12 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias a="atom ."
 
+# MySQL
+# export PATH=$PATH:/usr/local/mysql/bin
+
+# SDKMAN
+# source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 eval $(thefuck --alias)
 
 source $HOME/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -60,5 +66,9 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # create gitignore from gitignore.io
 gitignore() { curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore }
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/johnsylvain/.sdkman"
+[[ -s "/Users/johnsylvain/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/johnsylvain/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$HOME/.yarn/bin:$PATH"
