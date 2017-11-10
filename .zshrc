@@ -72,3 +72,6 @@ export SDKMAN_DIR="/Users/johnsylvain/.sdkman"
 [[ -s "/Users/johnsylvain/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/johnsylvain/.sdkman/bin/sdkman-init.sh"
 
 export PATH="$HOME/.yarn/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

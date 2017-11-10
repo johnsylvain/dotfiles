@@ -5,6 +5,7 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FILES=(
 	# ZSH
 	"ln -si ${BASEDIR}/.zshrc ~/.zshrc"
+	"ln -si ${BASEDIR}/.zprofile ~/.zprofile"
 	"ln -si ${BASEDIR}/john.zsh-theme $HOME/.oh-my-zsh/themes/john.zsh-theme"
 	
 	# Vim
