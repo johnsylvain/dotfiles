@@ -66,11 +66,6 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # create gitignore from gitignore.io
 gitignore() { curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore }
 
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/johnsylvain/.sdkman"
-[[ -s "/Users/johnsylvain/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/johnsylvain/.sdkman/bin/sdkman-init.sh"
-
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

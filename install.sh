@@ -10,6 +10,9 @@ FILES=(
 	
 	# Vim
 	"ln -si ${BASEDIR}/.vimrc ~/.vimrc"
+
+	# tmux
+	"ln -si ${BASEDIR}/.tmux.conf ~/.tmux.conf"
 	
 	# Git
 	"ln -si ${BASEDIR}/.gitconfig ~/.gitconfig"
