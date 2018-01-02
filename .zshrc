@@ -61,8 +61,8 @@ function mkcd {
   fi
 }
 
-# open in VS Code
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # create gitignore from gitignore.io
 gitignore() { curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore }

@@ -19,7 +19,7 @@ FILES=(
 )
 
 
-printf "\n\e[1mInstalling all dotfiles...\e[0m\n\n"
+printf "\n\e[1mLinking dotfiles...\e[0m\n\n"
 for f in "${FILES[@]}"; do
 	echo "exec: $f"
 	eval $f
