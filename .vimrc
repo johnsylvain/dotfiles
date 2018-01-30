@@ -1,11 +1,10 @@
 set autoindent
 set nocompatible
-set noexpandtab
 set number
-set shiftwidth=4
 set showmode
-set softtabstop=4
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
+set expandtab
 syntax on
 
 set nocompatible              " be iMproved, required
@@ -39,8 +38,8 @@ filetype off                  " required
 " Plugin 'scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
 " call vundle#end()            " required
-filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
+filetype plugin indent on
 "filetype plugin on
 "
 " Brief help
