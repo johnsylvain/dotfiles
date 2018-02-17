@@ -61,6 +61,9 @@ function mkcd {
   fi
 }
 
+# Search command history
+alias hg="history | grep"
+
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
