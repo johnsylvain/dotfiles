@@ -25,3 +25,4 @@ call vundle#end()
 filetype plugin indent on
 
 let NERDTreeShowHidden=1
+Plugin 'wakatime/vim-wakatime'
