@@ -27,3 +27,4 @@ done
 
 printf "\n\e[1mInstalling scripts...\e[0m\n\n"
 curl -L https://raw.githubusercontent.com/kamranahmedse/git-standup/master/installer.sh | sudo sh
+curl -L https://raw.githubusercontent.com/johnsylvain/git-cleanup/master/installer.sh | sudo sh
