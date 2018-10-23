@@ -24,3 +24,6 @@ for f in "${FILES[@]}"; do
 	echo "exec: $f"
 	eval $f
 done
+
+printf "\n\e[1mInstalling scripts...\e[0m\n\n"
+curl -L https://raw.githubusercontent.com/kamranahmedse/git-standup/master/installer.sh | sudo sh
