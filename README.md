@@ -1,10 +1,10 @@
 # dotfiles
+> My dotfiles and setup script
 
-my dotfiles
-- zsh
-- git
-- vim
+* Link dotfiles
+* Install homebrew and homebrew packages
+* Set macOS settings
 
-## installing
+## Installing
 install all files with `./install.sh`
 
