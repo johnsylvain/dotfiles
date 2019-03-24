@@ -27,6 +27,7 @@ export UPDATE_ZSH_DAYS=13
 plugins=(git git-open)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
@@ -37,8 +38,8 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias a="atom ."
 alias b="baton"
+alias hg="history | grep"
 
 # MySQL
 # export PATH=$PATH:/usr/local/mysql/bin
@@ -48,10 +49,7 @@ alias b="baton"
 
 eval $(thefuck --alias)
 
-source $HOME/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# mkdir and cd
-function mkcd {
+mkcd() {
   if [ ! -n "$1" ]; then
     echo "Enter a directory name"
   elif [ -d $1 ]; then
@@ -61,14 +59,12 @@ function mkcd {
   fi
 }
 
-# Search command history
-alias hg="history | grep"
+# create gitignore from gitignore.io
+gitignore() { curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore }
+cheat() { curl -L -s "http://cheat.sh/$1" }
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-# create gitignore from gitignore.io
-gitignore() { curl -L -s "https://www.gitignore.io/api/$1" >> .gitignore }
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
