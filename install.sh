@@ -33,7 +33,6 @@ brew upgrade --all
 # Install packages
 brew install hub
 brew install tmux
-brew install thefuck
 brew install zsh-syntax-highlighting
 brew install jq
 

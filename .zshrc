@@ -47,8 +47,6 @@ alias hg="history | grep"
 # SDKMAN
 # source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-eval $(thefuck --alias)
-
 mkcd() {
   if [ ! -n "$1" ]; then
     echo "Enter a directory name"
