@@ -10,7 +10,7 @@ function mkcd() {
 
 function mark() {
   export RECALL_TO=$(pwd)
-  echo -e "to return to ${RECALL_TO} use: recall"
+  echo -e "to return to ${RECALL_TO}:\n$ recall"
 }
 
 function recall() {
@@ -24,4 +24,10 @@ function gitignore() {
 
 function cheat() {
   curl -L -s "http://cheat.sh/$1"
+}
+
+function gitca() {
+  local BRANCH_NAME=$(git branch | grep \* | cut -d ' ' -f2)
+  git add .
+  git commit -m "$BRANCH_NAME: $1"
 }
