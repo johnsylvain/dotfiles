@@ -8,10 +8,16 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `install.sh` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+if test ! $(which zsh); then
+	printf "\n\e[1mInstalling zsh...\e[0m\n\n"
+	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
 printf "\n\e[1mLinking dotfiles...\e[0m\n\n"
 
 ln -si $BASEDIR/.zshrc ~/.zshrc
-ln -si $BASEDIR/.zprofile ~/.zprofile
+ln -si $BASEDIR/.zfunctions.sh ~/.zfunctions
+ln -si $BASEDIR/.zaliases.sh ~/.zaliases
 ln -si $BASEDIR/john.zsh-theme $HOME/.oh-my-zsh/themes/john.zsh-theme
 ln -si $BASEDIR/.vimrc ~/.vimrc
 ln -si $BASEDIR/.tmux.conf ~/.tmux.conf
@@ -35,6 +41,7 @@ brew install hub
 brew install tmux
 brew install zsh-syntax-highlighting
 brew install jq
+brew install yarn
 
 # Install casks
 brew cask install --appdir="/Applications" visual-studio-code
@@ -44,7 +51,7 @@ brew cask install --appdir="/Applications" spotify
 
 brew cleanup
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 curl -s "https://get.sdkman.io" | bash
