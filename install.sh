@@ -16,8 +16,8 @@ fi
 printf "\n\e[1mLinking dotfiles...\e[0m\n\n"
 
 ln -si $BASEDIR/.zshrc ~/.zshrc
-ln -si $BASEDIR/.zfunctions ~/.zfunctions
-ln -si $BASEDIR/.zaliases ~/.zaliases
+ln -si $BASEDIR/.zfunctions.sh ~/.zfunctions
+ln -si $BASEDIR/.zaliases.sh ~/.zaliases
 ln -si $BASEDIR/john.zsh-theme $HOME/.oh-my-zsh/themes/john.zsh-theme
 ln -si $BASEDIR/.vimrc ~/.vimrc
 ln -si $BASEDIR/.tmux.conf ~/.tmux.conf
@@ -51,7 +51,7 @@ brew cask install --appdir="/Applications" spotify
 
 brew cleanup
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 curl -s "https://get.sdkman.io" | bash
