@@ -11,6 +11,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 printf "\n\e[1mLinking dotfiles...\e[0m\n\n"
 
 ln -si $BASEDIR/.zshrc ~/.zshrc
+ln -si $BASEDIR/.zfunctions ~/.zfunctions
+ln -si $BASEDIR/.zaliases ~/.zaliases
 ln -si $BASEDIR/.zprofile ~/.zprofile
 ln -si $BASEDIR/john.zsh-theme $HOME/.oh-my-zsh/themes/john.zsh-theme
 ln -si $BASEDIR/.vimrc ~/.vimrc
@@ -35,6 +37,7 @@ brew install hub
 brew install tmux
 brew install zsh-syntax-highlighting
 brew install jq
+brew install yarn
 
 # Install casks
 brew cask install --appdir="/Applications" visual-studio-code
