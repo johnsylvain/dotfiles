@@ -28,6 +28,15 @@ function cheat() {
 
 function gitca() {
   local BRANCH_NAME=$(git branch | grep \* | cut -d ' ' -f2)
+  local COMMIT_PREFIX=""
+
+  case $BRANCH_NAME in
+    chore*) COMMIT_PREFIX="CHORE";;
+    fix*) COMMIT_PREFIX="FIX";;
+    feat*) COMMIT_PREFIX="FEAT";;
+    *) COMMIT_PREFIX=${BRANCH_NAME};;
+  esac
+
   git add .
-  git commit -m "$BRANCH_NAME: $1"
+  git commit -m "$COMMIT_PREFIX: $1"
 }
