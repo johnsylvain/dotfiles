@@ -31,12 +31,36 @@ function gitca() {
   local COMMIT_PREFIX=""
 
   case $BRANCH_NAME in
-    chore*) COMMIT_PREFIX="CHORE";;
-    fix*) COMMIT_PREFIX="FIX";;
-    feat*) COMMIT_PREFIX="FEAT";;
-    *) COMMIT_PREFIX=${BRANCH_NAME};;
+    chore*) COMMIT_PREFIX="CHORE: ";;
+    fix*) COMMIT_PREFIX="FIX: ";;
+    feat*) COMMIT_PREFIX="FEAT: ";;
+    master) COMMIT_PREFIX="";;
+    *) COMMIT_PREFIX="${BRANCH_NAME}: ";;
   esac
 
   git add .
-  git commit -m "$COMMIT_PREFIX: $1"
+  git commit -m "$COMMIT_PREFIX$1"
+}
+
+function gitu() {
+  git reset HEAD~1
+}
+
+function hidden () {
+  local visible=$(defaults read com.apple.finder AppleShowAllFiles)
+
+  if [[ $visible -eq 1 ]]; then
+    defaults write com.apple.finder AppleShowAllFiles -boolean false
+    killall Finder
+  else
+    defaults write com.apple.finder AppleShowAllFiles -boolean true
+    killall Finder
+  fi
+}
+
+function new() {
+  mkcd $1
+  npm init -y
+  git init
+  gitignore node
 }
