@@ -16,6 +16,11 @@ set t_Co=256
 set nocompatible
 filetype off
 
+noremap <up> <C-w><up>
+noremap <down> <C-w><down>
+noremap <left> <C-w><left>
+noremap <right> <C-w><right>
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
