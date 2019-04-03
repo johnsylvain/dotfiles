@@ -27,6 +27,11 @@ function cheat() {
 }
 
 function gitca() {
+  git add .
+  gitcb $1
+}
+
+function gitcb() {
   local BRANCH_NAME=$(git branch | grep \* | cut -d ' ' -f2)
   local COMMIT_PREFIX=""
 
@@ -38,7 +43,6 @@ function gitca() {
     *) COMMIT_PREFIX="${BRANCH_NAME}: ";;
   esac
 
-  git add .
   git commit -m "$COMMIT_PREFIX$1"
 }
 
@@ -46,7 +50,7 @@ function gitu() {
   git reset HEAD~1
 }
 
-function hidden () {
+function hidden() {
   local visible=$(defaults read com.apple.finder AppleShowAllFiles)
 
   if [[ $visible -eq 1 ]]; then
