@@ -50,6 +50,11 @@ function gitu() {
   git reset HEAD~1
 }
 
+function fco() {
+  git fetch origin $1
+  git checkout $1
+}
+
 function hidden() {
   local visible=$(defaults read com.apple.finder AppleShowAllFiles)
 
