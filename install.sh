@@ -22,6 +22,7 @@ ln -si $BASEDIR/john.zsh-theme $HOME/.oh-my-zsh/themes/john.zsh-theme
 ln -si $BASEDIR/.vimrc ~/.vimrc
 ln -si $BASEDIR/.tmux.conf ~/.tmux.conf
 ln -si $BASEDIR/.gitconfig ~/.gitconfig
+ln -si $BASEDIR/.ssh_config ~/.ssh/config
 
 printf "\n\e[1mInstalling packages...\e[0m\n\n"
 
