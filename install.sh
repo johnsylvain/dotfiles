@@ -38,6 +38,7 @@ brew upgrade --all
 
 # Install packages
 brew install hub
+brew install node
 brew install tmux
 brew install zsh-syntax-highlighting
 brew install jq
@@ -50,6 +51,9 @@ brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" spotify
 
 brew cleanup
+
+# Install NPM packages
+npm i -g trash-cli
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
