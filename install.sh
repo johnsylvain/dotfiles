@@ -63,6 +63,9 @@ curl -s "https://get.sdkman.io" | bash
 
 printf "\n\e[1mSetting system defaults...\e[0m\n\n"
 
+# set vim key repeat in vscode
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
 # Finder sidebar size
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 

@@ -73,3 +73,22 @@ function new() {
   git init
   gitignore node
 }
+
+function extract() {
+  if [ -z "$1" ]; then
+    echo "Usage: extract <path/file_name>.ext"
+  else
+    for n in "$@"
+    do
+      case "${n%,}" in
+        *.tar|*.tgz) tar -xzvf "$n";;
+        *.gz) gunzip -k "$n";;
+        *.zip) unzip "./$n";;
+        *)
+          echo "Cannot extract $n"
+          return 1
+        ;;
+      esac
+    done
+  fi
+}
