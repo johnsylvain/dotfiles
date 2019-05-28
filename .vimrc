@@ -20,6 +20,7 @@ noremap <up> <C-w><up>
 noremap <down> <C-w><down>
 noremap <left> <C-w><left>
 noremap <right> <C-w><right>
+inoremap jk <esc>
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
