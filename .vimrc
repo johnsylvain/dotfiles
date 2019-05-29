@@ -15,6 +15,7 @@ set t_Co=256
 
 set nocompatible
 filetype off
+filetype plugin indent on
 
 noremap <up> <C-w><up>
 noremap <down> <C-w><down>
@@ -26,9 +27,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
-filetype plugin indent on
 
 let NERDTreeShowHidden=1
-Plugin 'wakatime/vim-wakatime'

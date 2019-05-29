@@ -9,8 +9,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 if test ! $(which zsh); then
-	printf "\n\e[1mInstalling zsh...\e[0m\n\n"
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  printf "\n\e[1mInstalling zsh...\e[0m\n\n"
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 printf "\n\e[1mLinking dotfiles...\e[0m\n\n"
@@ -30,8 +30,8 @@ curl -L https://raw.githubusercontent.com/kamranahmedse/git-standup/master/insta
 curl -L https://raw.githubusercontent.com/johnsylvain/git-cleanup/master/installer.sh | sudo sh
 
 if test ! $(which brew); then
-	echo "Installing homebrew..."
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Installing homebrew..."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 brew update
