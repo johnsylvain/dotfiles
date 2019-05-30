@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+dotfiles_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+function install_dotfile() {
+  local name="$1"
+  local from="$dotfiles_dir/$name"
+  local to="$HOME/.$name"
+
+  if [ ! -e $to ]; then
+    echo "Creating $to..."
+    ln -si $from $to
+  fi
+}

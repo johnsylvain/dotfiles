@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+source setup-helpers
+
+# brew install vim
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+
+install_dotfile "vimrc"
+
+vim +PluginInstall +qall
