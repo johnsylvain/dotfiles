@@ -38,10 +38,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
+Plugin 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'json', 'graphql', 'markdown'] }
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -50,3 +54,14 @@ call vundle#end()
 let NERDTreeShowHidden=1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+
+let g:prettier#config#bracket_spacing="true"
+let g:prettier#config#jsx_bracket_same_line="false"
+let g:prettier#config#parser="babylon"
+let g:prettier#config#single_quote="true"
+let g:prettier#config#trailing_comma="none"
+let g:prettier#autoformat=0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.json,*.graphql,*.md PrettierAsync
+autocmd BufWritePre .babelrc,.eslintrc,.prettierrc PrettierAsync
