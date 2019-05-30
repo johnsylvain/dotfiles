@@ -14,5 +14,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-source "$HOME/.zfunctions"
-source "$HOME/.zaliases"
+source "$HOME/.zsh_functions"
+source "$HOME/.zsh_aliases"
