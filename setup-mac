@@ -28,5 +28,3 @@ for app in "Dock" "Finder"; do
   killall "${app}" > /dev/null 2>&1
 done
 
-printf "\n\e[1mDone.\e[0m\n"
-echo "Note that some of these changes require a logout/restart of your OS to take effect.  At a minimum, be sure to restart your Terminal."

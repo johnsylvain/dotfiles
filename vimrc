@@ -12,6 +12,7 @@ syntax on
 set relativenumber
 set t_Co=256
 set nocompatible
+set splitright
 filetype off
 filetype plugin indent on
 let g:jsx_ext_required=0
@@ -27,6 +28,10 @@ noremap <left> <C-w><left>
 noremap <right> <C-w><right>
 inoremap jk <esc>
 nmap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 nnoremap p p=`]
 nnoremap P P=`]
 
@@ -45,7 +50,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'json', 'graphql', 'markdown'] }
+  \ 'for': ['javascript', 'jsx', 'tsx', 'typescript', 'css', 'json', 'graphql', 'markdown'] }
 call vundle#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
