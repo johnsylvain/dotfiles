@@ -6,3 +6,5 @@
 
 install all files with `./setup`
 
+install individual components by running e.g. `./setup-vim`
+

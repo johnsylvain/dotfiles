@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+if test ! $(which zsh); then
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+source setup-helpers
+
+install_dotfile "zshrc"
+install_dotfile "zsh_functions"
+install_dotfile "zsh_aliases"
