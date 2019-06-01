@@ -8,6 +8,7 @@ fi
 
 source setup-helpers
 
+install_dotfile "oh-my-zsh/themes/john.zsh-theme"
 install_dotfile "zshrc"
 install_dotfile "zsh_functions"
 install_dotfile "zsh_aliases"
