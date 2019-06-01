@@ -3,6 +3,7 @@
 
 set autoindent
 set nocompatible
+set backspace=2
 set number
 set showmode
 set tabstop=2
