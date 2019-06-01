@@ -4,4 +4,4 @@ set -e
 
 source setup-helpers
 
-install_dotfile "ssh_config"
+install_dotfile "ssh/config"
