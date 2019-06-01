@@ -2,7 +2,7 @@
 
 set -e
 
-source setup-helpers
+source './scripts/setup-helpers'
 
 # brew install vim
 

@@ -5,6 +5,6 @@ set -e
 curl -L https://raw.githubusercontent.com/kamranahmedse/git-standup/master/installer.sh | sudo sh
 curl -L https://raw.githubusercontent.com/johnsylvain/git-cleanup/master/installer.sh | sudo sh
 
-source setup-helpers
+source './scripts/setup-helpers'
 
 install_dotfile "gitconfig"

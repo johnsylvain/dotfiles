@@ -2,6 +2,6 @@
 
 set -e
 
-source setup-helpers
+source './scripts/setup-helpers'
 
 install_dotfile "tmux.conf"
