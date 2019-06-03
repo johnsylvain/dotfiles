@@ -49,6 +49,7 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'jsx', 'tsx', 'typescript', 'css', 'json', 'graphql', 'markdown'] }
