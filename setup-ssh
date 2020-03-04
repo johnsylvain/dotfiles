@@ -2,6 +2,6 @@
 
 set -e
 
-source './scripts/setup-helpers'
+source './setup-helpers'
 
 install_dotfile "ssh/config"

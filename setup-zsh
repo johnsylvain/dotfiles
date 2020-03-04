@@ -6,7 +6,7 @@ if test ! $(which zsh); then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
-source './scripts/setup-helpers'
+source './setup-helpers'
 
 install_dotfile "oh-my-zsh/themes/john.zsh-theme"
 install_dotfile "zshrc"
