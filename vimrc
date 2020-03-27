@@ -14,6 +14,8 @@ set relativenumber
 set t_Co=256
 set nocompatible
 set splitright
+set path+=**
+set wildmenu
 filetype off
 filetype plugin indent on
 let g:jsx_ext_required=0
