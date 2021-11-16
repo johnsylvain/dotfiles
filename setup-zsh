@@ -8,6 +8,8 @@ fi
 
 source './setup-helpers'
 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh
+
 install_dotfile "oh-my-zsh/themes/john.zsh-theme"
 install_dotfile "zshrc"
 install_dotfile "zsh_functions"

@@ -1,3 +1,4 @@
+ZSH_DISABLE_COMPFIX=true
 export ZSH=$HOME/.oh-my-zsh
 export UPDATE_ZSH_DAYS=13
 ZSH_THEME="john"
@@ -13,6 +14,5 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-source "$HOME/.sdkman/bin/sdkman-init.sh"
 source "$HOME/.zsh_functions"
 source "$HOME/.zsh_aliases"
