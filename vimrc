@@ -20,6 +20,14 @@ filetype off
 filetype plugin indent on
 let g:jsx_ext_required=0
 
+" Disable key composition/IME in normal mode
+set noimdisable
+set iminsert=0
+set imsearch=0
+
+" Ensure key repeat works
+set esckeys
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mappings
 

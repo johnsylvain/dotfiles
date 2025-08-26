@@ -17,3 +17,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 source "$HOME/.zsh_functions"
 source "$HOME/.zsh_aliases"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+. "$HOME/.posthog/env"
