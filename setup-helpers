@@ -9,8 +9,36 @@ function install_dotfile() {
   local from="$dotfiles_dir/$name"
   local to="$HOME/.$name"
 
-  if [ ! -e $to ]; then
-    echo "Creating $to..."
-    ln -si $from $to
+  # If the destination is a symlink, verify it points to a valid target.
+  # If it's broken or points elsewhere, we replace it.
+  if [ -L "$to" ]; then
+    local current
+    current="$(readlink "$to" 2>/dev/null || true)"
+
+    if [ ! -e "$to" ]; then
+      echo "Fixing broken symlink: $to -> $current (target missing)"
+      rm -f "$to"
+    elif [ "$current" != "$from" ]; then
+      echo "Updating symlink: $to -> $from (was -> $current)"
+      rm -f "$to"
+    else
+      echo "Symlink already correct: $to -> $from"
+      return 0
+    fi
   fi
+
+  # If it exists and is not a symlink, only replace when explicitly safe.
+  if [ -e "$to" ] && [ ! -L "$to" ]; then
+    if [ "$name" = "zshrc" ]; then
+      backup_dir="${to}.bak.$(date +%Y%m%d%H%M%S)"
+      echo "Backing up existing $to -> $backup_dir"
+      mv "$to" "$backup_dir"
+    else
+      echo "Skipping $to (exists and is not a symlink)"
+      return 0
+    fi
+  fi
+
+  echo "Linking $to -> $from"
+  ln -s "$from" "$to"
 }

@@ -22,4 +22,7 @@ source "$HOME/.zsh_aliases"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-. "$HOME/.posthog/env"
+# Optional PostHog env file (may not exist on all machines).
+if [ -f "$HOME/.posthog/env" ]; then
+  . "$HOME/.posthog/env"
+fi
